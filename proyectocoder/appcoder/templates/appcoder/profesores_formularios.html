@@ -1,0 +1,26 @@
+{% extends 'appcoder/base.html' %}
+
+
+{% block contenido %}
+
+<form action="/coder/profesores/crear/" method="post">
+    {% csrf_token %}
+
+    <p>
+        Nombre <input type="text" name="nombre">
+    </p>
+
+    <p>
+        Apellido <input type="text" name="apellido">
+    </p>
+
+    <p>
+        Email <input type="email" name="email">
+    </p>
+
+    <p>
+        Profesion <input type="text" name="profesion">
+    </p>
+</form>
+
+{% endblock %}
